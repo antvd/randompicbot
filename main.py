@@ -18,4 +18,5 @@ def message_reply(message):
         rfile = ["./pics/", random.choice(os.listdir(path = './pics'))]
         photo = open("".join(rfile), 'rb')
         bot.send_photo( message.chat.id, photo )
+        photo.close()
 bot.infinity_polling()
